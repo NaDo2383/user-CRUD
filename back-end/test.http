@@ -1,0 +1,29 @@
+### 
+
+POST http://localhost:8000/user
+Content-Type: application/json
+
+{
+    "username": "test",
+    "age": "test"
+}
+
+### 
+
+DELETE  http://localhost:8000/user
+Content-Type: application/json
+
+{
+    "id":"ldi8n7h8"
+}
+
+### 
+
+PUT  http://localhost:8000/user
+Content-Type: application/json
+
+{
+    "id":"ldi8n7h8",
+    "username": "test2",
+    "age": "test2"
+}
