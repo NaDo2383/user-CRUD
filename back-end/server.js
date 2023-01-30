@@ -1,8 +1,7 @@
 const express = require('express')
-const port = 8000
+const port = 9000
 const cors = require('cors')
 const fs = require('fs')
-const { json } = require('express')
 
 const app = express()
 app.use(cors())
@@ -61,7 +60,6 @@ app.delete("/user", (req, res) => {
 
 app.put("/user", (req, res) => {
     const body = req.body
-
     fs.readFile(file, "utf-8", (readErr, data) => {
         let savedData = data ? JSON.parse(data) : []
         if (readErr) {
@@ -88,4 +86,4 @@ app.put("/user", (req, res) => {
 
 app.listen(port, () => {
     console.log(`Server is running on http://localhost:${port}`);
-})
+}) 
